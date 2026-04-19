@@ -20,10 +20,13 @@ ZERO_AS_MISSING_COLS = [
 
 app = FastAPI(title="Diabetes Prediction API")
 
-# Allow frontend running anywhere
+# Allow specific frontend origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Allowing all origins for easier deployment, restrict later if needed
+    allow_origins=[
+        "http://localhost:3000",
+        "https://dsbda-project-eight.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
