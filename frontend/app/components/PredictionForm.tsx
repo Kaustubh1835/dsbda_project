@@ -63,11 +63,11 @@ export default function PredictionForm({ onSubmit, isLoading }: Props) {
     e.preventDefault();
     if (!validate()) return;
 
-    const payload = {} as DiabetesInput;
+    const payload: Record<string, number> = {};
     for (const field of FORM_FIELDS) {
-      (payload as Record<string, number>)[field.key] = Number(values[field.key]);
+      payload[field.key] = Number(values[field.key]);
     }
-    onSubmit(payload);
+    onSubmit(payload as unknown as DiabetesInput);
   }
 
   function handleReset() {
