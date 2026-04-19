@@ -6,8 +6,13 @@ import PredictionForm from "./components/PredictionForm";
 import ResultCard from "./components/ResultCard";
 import ErrorBanner from "./components/ErrorBanner";
 
-const API_URL =
+let API_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/predict";
+
+// Gracefully handle if the environment variable is missing the /predict path
+if (!API_URL.endsWith("/predict")) {
+  API_URL = `${API_URL.replace(/\/$/, "")}/predict`;
+}
 
 export default function Home() {
   const [result, setResult] = useState<PredictionResult | null>(null);
