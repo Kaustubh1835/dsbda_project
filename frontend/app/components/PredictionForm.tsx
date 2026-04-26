@@ -2,6 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { FORM_FIELDS, type DiabetesInput, type FieldMeta } from "../types";
+import * as Icons from "lucide-react";
 
 interface Props {
   onSubmit: (data: DiabetesInput) => void;
@@ -90,10 +91,14 @@ export default function PredictionForm({ onSubmit, isLoading }: Props) {
       <div className="form-grid">
         {FORM_FIELDS.map((field: FieldMeta) => {
           const hasError = touched[field.key] && errors[field.key];
+          const IconComponent = (Icons as any)[field.icon] || Icons.HelpCircle;
+
           return (
             <div key={field.key} className="field">
               <label htmlFor={field.key} className="field-label">
-                <span className="field-label-icon">{field.icon}</span>
+                <span className="field-label-icon">
+                  <IconComponent size={14} strokeWidth={2.5} />
+                </span>
                 {field.label}
               </label>
               <input

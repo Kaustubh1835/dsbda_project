@@ -5,6 +5,7 @@ import type { DiabetesInput, PredictionResult } from "./types";
 import PredictionForm from "./components/PredictionForm";
 import ResultCard from "./components/ResultCard";
 import ErrorBanner from "./components/ErrorBanner";
+import { ShieldAlert } from "lucide-react";
 
 let API_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/predict";
@@ -62,7 +63,7 @@ export default function Home() {
         {/* ── Hero ──────────────────────────────────────────────── */}
         <section className="hero">
           <div className="hero-badge">
-            <span className="hero-badge-dot" />
+            <ShieldAlert size={12} strokeWidth={3} />
             ML-Powered Health Screening
           </div>
 

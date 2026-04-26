@@ -37,7 +37,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 2",
     step: "1",
     min: 0,
-    icon: "👶",
+    icon: "Activity",
     hint: "Number of pregnancies",
   },
   {
@@ -46,7 +46,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 120",
     step: "0.1",
     min: 0,
-    icon: "🩸",
+    icon: "Droplets",
     hint: "Plasma glucose (mg/dL)",
   },
   {
@@ -55,7 +55,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 70",
     step: "0.1",
     min: 0,
-    icon: "💓",
+    icon: "HeartPulse",
     hint: "Diastolic (mm Hg)",
   },
   {
@@ -64,7 +64,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 20",
     step: "0.1",
     min: 0,
-    icon: "📏",
+    icon: "Layers",
     hint: "Triceps fold (mm)",
   },
   {
@@ -73,7 +73,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 85",
     step: "0.1",
     min: 0,
-    icon: "💉",
+    icon: "Syringe",
     hint: "2-hr serum (mu U/ml)",
   },
   {
@@ -82,7 +82,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 28.5",
     step: "0.1",
     min: 0,
-    icon: "⚖️",
+    icon: "Scale",
     hint: "Body mass index (kg/m²)",
   },
   {
@@ -91,7 +91,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 0.5",
     step: "0.001",
     min: 0,
-    icon: "🧬",
+    icon: "Dna",
     hint: "Pedigree function score",
   },
   {
@@ -100,7 +100,7 @@ export const FORM_FIELDS: FieldMeta[] = [
     placeholder: "e.g. 35",
     step: "1",
     min: 0,
-    icon: "🎂",
+    icon: "User",
     hint: "Age in years",
   },
 ];

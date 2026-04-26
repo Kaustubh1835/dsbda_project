@@ -1,6 +1,7 @@
 "use client";
 
 import type { PredictionResult } from "../types";
+import { AlertCircle, CheckCircle2, RotateCcw } from "lucide-react";
 
 interface Props {
   result: PredictionResult;
@@ -32,7 +33,11 @@ export default function ResultCard({ result, onReset }: Props) {
         }`}
       >
         <span className="result-status-icon">
-          {isDiabetes ? "⚠️" : "✅"}
+          {isDiabetes ? (
+            <AlertCircle size={20} strokeWidth={2.5} />
+          ) : (
+            <CheckCircle2 size={20} strokeWidth={2.5} />
+          )}
         </span>
         <span className="result-status-label">{result.prediction}</span>
       </div>
@@ -91,8 +96,9 @@ export default function ResultCard({ result, onReset }: Props) {
         onClick={onReset}
         className="btn-primary"
         id="new-prediction"
-        style={{ width: "100%" }}
+        style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}
       >
+        <RotateCcw size={18} />
         New Prediction
       </button>
     </div>
